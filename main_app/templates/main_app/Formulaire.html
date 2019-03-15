@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salle de Sport [Toujours En Forme]</title>
+</head>
+<body>
+	<h1>Salle de Sport [Toujours En Forme] : Inscription</h1>
+	<form method="post" action="">
+		{% csrf_token %}
+		<fieldset>
+			<legend>Indetification</legend>
+			<table>
+				{{ form.as_table }}
+				<tr>
+					<th>Sports: </th>
+					<td>
+						<select name="sport" id="sport" multiple>
+							{% for sport in sports %}
+							<option value="{{sport}}">{{sport}}</option>
+							{% endfor %}
+						</select>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<input type="submit" value="Envoyer"/>
+	</form>
+
+</body>
+</html>

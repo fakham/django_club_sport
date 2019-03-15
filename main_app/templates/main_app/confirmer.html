@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td>Nom:</td>
+			<td>{{adherent.nom}}</td>
+		</tr>
+		<tr>
+			<td>Prenom:</td>
+			<td>{{adherent.prenom}}</td>
+		</tr>
+		<tr>
+			<td>Addresse:</td>
+			<td>{{adherent.adresse}}</td>
+		</tr>
+		<tr>
+			<td>Email:</td>
+			<td>{{adherent.email}}</td>
+		</tr>
+		<tr>
+			<td>Tel:</td>
+			<td>{{adherent.tel}}</td>
+		</tr>
+		<tr>
+			<td>Genre:</td>
+			<td>{{adherent.genre}}</td>
+		</tr>
+		<tr>
+			<td>Sports Sélectionnés :</td>
+			<td>
+				<ol>
+					{% for sport in sports %}
+					<li>{{ sport }}</li>
+					{% endfor %}
+				</ol>
+			</td>
+		</tr>
+	</table>
+	<form method="post" action="confirmation">
+		{% csrf_token %}
+		<input type="submit" value="Confirmer" /> &nbsp;&nbsp;
+		<a href="/" >Annuler</a> &nbsp;&nbsp;
+	</form>
+	<br/>
+</body>
+</html>

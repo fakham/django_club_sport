@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Club de Sport [Toujourrs En Forme ]</title>
+</head>
+<body>
+	<h1>Club de Sport [Toujourrs En Forme ]</h1>
+	<table border="1">
+		<tr>
+			<td><img src="{% static 'images/marche.jpg' %}" alt="Marche" height="100"
+				width="300"></td>
+			<td><img src="{% static 'images/footing.jpg' %}" alt="Footing" height="100"
+				width="300"></td>
+		</tr>
+
+		<tr>
+			<td><img src="{% static 'images/natation.jpg' %}" alt="Natation" height="100"
+				width="300"></td>
+			<td><img src="{% static 'images/tenis.jpg' %}" alt="Tennis" height="100"
+				width="300"></td>
+		</tr>
+
+		<tr>
+			<td colspan="2"><img  src="{% static 'images/terrainFott.jpg' %}" alt="Terrain du Foot" height="200"
+				width="600"></td>
+		</tr>
+	</table>
+	<a href="/inscription" >S'inscrire</a>
+</body>
+</html>

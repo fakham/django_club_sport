@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Succes</title>
+</head>
+<body>
+	<h2>Bienvenue '{{ adherent.nom }}'. Vous êtes inscrit à ces sports :</h2>
+	<ol>
+		{% for sport in sports %}
+		<li>{{ sport }}</li>
+		{% endfor %}
+	</ol>
+	<h2>
+		<a href="/">Back to main menu</a>
+	</h2>
+</body>
+</html>
